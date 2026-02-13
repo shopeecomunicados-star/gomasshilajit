@@ -3,94 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elix Labs | Shilajit Gummies</title>
+<title>Elix Labs | Shilajit do Himalaia</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-body{
+*{
     margin:0;
-    font-family:Arial, sans-serif;
-    background:#000;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat', sans-serif;
+    background:#0a0a0a;
     color:#fff;
 }
 
+/* TOP BAR */
 .topbar{
-    background:#d4af37;
+    background:linear-gradient(90deg,#c6a437,#e6c35c);
     color:#000;
     text-align:center;
+    font-size:13px;
+    font-weight:600;
     padding:10px;
-    font-weight:bold;
-    font-size:14px;
+    letter-spacing:.5px;
 }
 
-section{
-    padding:50px 20px;
-    text-align:center;
+/* HERO */
+.hero{
+    padding:20px 20px 40px;
 }
 
-h1{font-size:26px;margin:15px 0;}
-h2{font-size:22px;margin:15px 0;}
-h3{font-size:18px;margin:10px 0;}
-p{font-size:15px;line-height:1.6;}
-
-.gold{color:#d4af37;}
-
-.btn{
-    display:block;
-    background:#d4af37;
-    color:#000;
-    padding:18px;
-    margin:25px auto;
-    width:90%;
-    max-width:400px;
-    font-weight:bold;
-    text-decoration:none;
-    border-radius:6px;
-}
-
-.dark{background:#111;}
-.light{background:#f5f5f5;color:#000;}
-
-.box{
-    border:1px solid #d4af37;
-    padding:20px;
-    margin:20px 0;
-    border-radius:8px;
-}
-
-.price-box{
-    border:2px solid #d4af37;
-    padding:20px;
-    margin:15px 0;
-}
-
-img{
-    width:100%;
-    margin:20px 0;
-}
-
-/* CARROSSEL */
-.carousel-container{
+.carousel-wrapper{
     position:relative;
     overflow:hidden;
-    width:100%;
+    border-radius:16px;
 }
 
 .carousel{
     display:flex;
-    transition:transform 0.3s ease;
-    touch-action:pan-y;
+    transition:transform .4s cubic-bezier(.22,.61,.36,1);
 }
 
 .carousel img{
     width:100%;
     flex-shrink:0;
+    pointer-events:none;
     user-select:none;
-    -webkit-user-drag:none;
 }
 
 .indicators{
     position:absolute;
-    bottom:15px;
+    bottom:12px;
     width:100%;
     display:flex;
     justify-content:center;
@@ -98,20 +64,58 @@ img{
 }
 
 .indicators div{
-    width:8px;
-    height:8px;
-    background:#777;
+    width:6px;
+    height:6px;
+    background:rgba(255,255,255,.4);
     border-radius:50%;
+    transition:.3s;
 }
 
 .indicators .active{
-    background:#d4af37;
+    background:#e6c35c;
+    transform:scale(1.3);
 }
 
-footer{
-    background:#111;
-    padding:40px 20px;
+/* TEXT AREA */
+.hero-content{
+    margin-top:30px;
+}
+
+.hero-content h1{
+    font-size:24px;
+    font-weight:800;
+    line-height:1.3;
+}
+
+.hero-content h2{
+    font-size:14px;
+    font-weight:600;
+    color:#e6c35c;
+    margin-top:10px;
+    letter-spacing:1px;
+}
+
+.rating{
+    margin-top:15px;
     font-size:13px;
+    opacity:.8;
+}
+
+.btn-primary{
+    margin-top:25px;
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(90deg,#c6a437,#e6c35c);
+    color:#000;
+    font-weight:700;
+    font-size:16px;
+    letter-spacing:.5px;
+}
+
+.btn-primary:active{
+    transform:scale(.98);
 }
 </style>
 </head>
@@ -119,208 +123,97 @@ footer{
 <body>
 
 <div class="topbar">
-🔥 ATÉ 20% DE DESCONTO • ESTOQUE LIMITADO
+🔥 PROMOÇÃO POR TEMPO LIMITADO • FRETE GRÁTIS
 </div>
 
-<!-- HERO -->
-<section>
+<section class="hero">
 
-<div class="carousel-container">
-<div class="carousel" id="carousel">
+<div class="carousel-wrapper">
+    <div class="carousel" id="carousel">
+        <img src="/1.jpg">
+        <img src="/2.jpg">
+        <img src="/3.jpg">
+        <img src="/4.jpg">
+        <img src="/5.jpg">
+        <img src="/6.jpg">
+        <img src="/7.jpg">
+        <img src="/8.jpg">
+        <img src="/9.jpg">
+        <img src="/10.jpg">
+        <img src="/11.jpg">
+    </div>
 
-<img src="/1.jpg">
-<img src="/2.jpg">
-<img src="/3.jpg">
-<img src="/4.jpg">
-<img src="/5.jpg">
-<img src="/6.jpg">
-<img src="/7.jpg">
-<img src="/8.jpg">
-<img src="/9.jpg">
-<img src="/10.jpg">
-<img src="/11.jpg">
-
-</div>
-<div class="indicators" id="indicators"></div>
+    <div class="indicators" id="indicators"></div>
 </div>
 
-<h1>GOMAS DE SHILAJIT DO HIMALAIA</h1>
-<h2 class="gold">3.000MG • 75% ÁCIDO FÚLVICO • 88% MINERAIS</h2>
-<p>Mais energia. Mais foco. Mais desempenho.</p>
+<div class="hero-content">
+    <h1>Shilajit do Himalaia<br>Alta Potência 3000MG</h1>
+    <h2>75% ÁCIDO FÚLVICO • 88% MINERAIS TRAÇO</h2>
 
-<a href="#" class="btn">COMPRAR AGORA</a>
+    <div class="rating">
+        ⭐⭐⭐⭐⭐ 4.8/5 • 17.000+ Avaliações
+    </div>
 
-</section>
-
-<!-- OFERTA -->
-<section class="dark">
-<h2 class="gold">OFERTA ESPECIAL</h2>
-
-<div class="price-box">
-<h3>Compre 1</h3>
-<p>R$129,65</p>
+    <button class="btn-primary">COMPRAR AGORA</button>
 </div>
 
-<div class="price-box">
-<h3>Compre 1 e Ganhe 1 Grátis</h3>
-<p><s>R$259,30</s> R$129,65</p>
-</div>
-
-<div class="price-box">
-<h3>Compre 2 e Ganhe 1 Grátis</h3>
-<p><s>R$311,52</s> R$206,19</p>
-</div>
-
-<div class="price-box">
-<h3>Compre 3 e Ganhe 2 + Frete Grátis</h3>
-<p><s>R$441,43</s> R$259,30</p>
-</div>
-
-<a href="#" class="btn">ADICIONAR AO CARRINHO</a>
 </section>
-
-<!-- LIFESTYLE -->
-<section>
-<img src="/lifestyle-1.jpg">
-<h2>Não é apenas um suplemento</h2>
-<p>É uma mudança de estilo de vida.</p>
-</section>
-
-<!-- BENEFÍCIOS -->
-<section class="dark">
-<img src="/benefit-energy.jpg">
-<h2 class="gold">Energia Limpa o Dia Todo</h2>
-<p>Sem quedas bruscas. Resistência constante.</p>
-</section>
-
-<section>
-<img src="/benefit-libido.jpg">
-<h2>Reviva Sua Libido</h2>
-<p>Mais desempenho e confiança.</p>
-</section>
-
-<section class="dark">
-<img src="/benefit-focus.jpg">
-<h2 class="gold">Mais Foco e Controle</h2>
-<p>Clareza mental restaurada.</p>
-</section>
-
-<!-- CIÊNCIA -->
-<section>
-<img src="/science.jpg">
-<h2>Como Funciona</h2>
-<p>O ácido fúlvico melhora absorção mineral e apoia produção natural de testosterona.</p>
-</section>
-
-<!-- MELANINA -->
-<section class="dark">
-<img src="/melanina.jpg">
-<h2 class="gold">Fórmula para Corpos Ricos em Melanina</h2>
-<p>Absorção otimizada e equilíbrio hormonal.</p>
-</section>
-
-<!-- DEPOIMENTOS -->
-<section>
-<h2>Resultados Reais</h2>
-
-<img src="/testimonial-1.jpg">
-<p>"Me senti um novo homem em duas semanas."</p>
-
-<img src="/testimonial-2.jpg">
-<p>"Minha resistência aumentou."</p>
-
-<img src="/testimonial-3.jpg">
-<p>"Minha confiança está muito maior."</p>
-</section>
-
-<!-- PROCESSO -->
-<section class="dark">
-<h2 class="gold">O Caminho do Poder</h2>
-
-<img src="/process-rock.jpg">
-<p>A Rocha</p>
-
-<img src="/process-resin.jpg">
-<p>A Resina</p>
-
-<img src="/process-gummy.jpg">
-<p>A Goma</p>
-</section>
-
-<!-- COMPARAÇÃO -->
-<section>
-<img src="/comparison.jpg">
-<h2>Por Que Nos Escolher?</h2>
-<p>Fácil • Sabor agradável • Dosagem consistente</p>
-</section>
-
-<!-- CTA FINAL -->
-<section class="dark">
-<img src="/final-cta.jpg">
-<h2 class="gold">Garantia de 30 Dias</h2>
-<p>100% satisfação ou seu dinheiro de volta.</p>
-<a href="#" class="btn">COMPRE AGORA</a>
-</section>
-
-<footer>
-<p>© 2026 Elix Labs</p>
-<p>Este produto não se destina a diagnosticar, tratar ou curar qualquer doença.</p>
-</footer>
 
 <script>
-const carousel=document.getElementById("carousel");
-const slides=carousel.querySelectorAll("img");
-const indicatorsContainer=document.getElementById("indicators");
+const carousel = document.getElementById('carousel');
+const indicatorsContainer = document.getElementById('indicators');
+const slides = carousel.querySelectorAll('img');
 
-let currentIndex=0;
-let startX=0;
-let isDragging=false;
+let currentIndex = 0;
+let startX = 0;
+let isDragging = false;
 
-slides.forEach((_,index)=>{
-    const dot=document.createElement("div");
-    if(index===0)dot.classList.add("active");
+slides.forEach((_, index)=>{
+    const dot = document.createElement('div');
+    if(index === 0) dot.classList.add('active');
     indicatorsContainer.appendChild(dot);
 });
 
-const indicators=indicatorsContainer.querySelectorAll("div");
+const indicators = indicatorsContainer.querySelectorAll('div');
 
 function updateIndicators(){
-    indicators.forEach(dot=>dot.classList.remove("active"));
-    indicators[currentIndex].classList.add("active");
+    indicators.forEach(dot=>dot.classList.remove('active'));
+    indicators[currentIndex].classList.add('active');
 }
 
 function setPosition(){
-    carousel.style.transform=`translateX(${-currentIndex*window.innerWidth}px)`;
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
-carousel.addEventListener("touchstart",(e)=>{
-    isDragging=true;
-    startX=e.touches[0].clientX;
-    carousel.style.transition="none";
-    document.body.style.overflow="hidden";
+carousel.addEventListener('touchstart',(e)=>{
+    startX = e.touches[0].clientX;
+    isDragging = true;
 });
 
-carousel.addEventListener("touchmove",(e)=>{
-    if(!isDragging)return;
-    const diff=e.touches[0].clientX-startX;
-    carousel.style.transform=`translateX(${(-currentIndex*window.innerWidth)+diff}px)`;
+carousel.addEventListener('touchmove',(e)=>{
+    if(!isDragging) return;
+    const diff = e.touches[0].clientX - startX;
+    if(Math.abs(diff) > 10){
+        e.preventDefault();
+    }
 });
 
-carousel.addEventListener("touchend",(e)=>{
-    if(!isDragging)return;
-    isDragging=false;
-    const diff=e.changedTouches[0].clientX-startX;
+carousel.addEventListener('touchend',(e)=>{
+    if(!isDragging) return;
+    isDragging = false;
 
-    if(diff<-50 && currentIndex<slides.length-1)currentIndex++;
-    if(diff>50 && currentIndex>0)currentIndex--;
+    const diff = e.changedTouches[0].clientX - startX;
 
-    carousel.style.transition="transform 0.3s ease";
+    if(diff < -50 && currentIndex < slides.length-1){
+        currentIndex++;
+    }
+    if(diff > 50 && currentIndex > 0){
+        currentIndex--;
+    }
+
     setPosition();
     updateIndicators();
-    document.body.style.overflow="auto";
 });
-
-window.addEventListener("resize",setPosition);
 </script>
 
 </body>
