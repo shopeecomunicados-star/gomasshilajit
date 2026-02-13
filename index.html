@@ -5,275 +5,337 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elix Labs | Shilajit do Himalaia</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-background:#0b0b0b;
-color:#fff;
-font-family:'Montserrat',sans-serif;
-}
-
-.topbar{
-background:#d4af37;
-color:#000;
-text-align:center;
-padding:10px;
-font-weight:700;
-font-size:13px;
-}
-
-section{
-padding:50px 20px;
-}
-
-h1,h2,h3{
-font-family:'Oswald',sans-serif;
-letter-spacing:1px;
-}
-
-.gold{color:#d4af37;}
-
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0a;color:#fff;font-family:'Inter',sans-serif}
+h1,h2,h3{font-family:'Oswald',sans-serif;letter-spacing:1px}
+section{padding:70px 20px}
+.container{max-width:1100px;margin:auto}
+.gold{color:#c6a94a}
 .btn{
 display:block;
 width:100%;
 padding:18px;
-background:#d4af37;
+background:#c6a94a;
 color:#000;
-border:none;
-border-radius:6px;
-font-weight:800;
-margin-top:20px;
+font-weight:700;
+text-align:center;
+border-radius:8px;
+margin-top:25px;
 }
-
 .hero{
-padding-top:20px;
+padding-top:40px;
+background:linear-gradient(to bottom,#0a0a0a,#111);
 }
-
-.carousel-wrapper{
-overflow:hidden;
-border-radius:12px;
-position:relative;
-}
-
-.carousel{
-display:flex;
-transition:transform .4s ease;
-}
-
-.slide{
-min-width:100%;
-}
-
-.slide img{
-width:100%;
-display:block;
-}
-
-.dots{
-position:absolute;
-bottom:10px;
-width:100%;
-display:flex;
-justify-content:center;
-gap:6px;
-}
-
-.dots span{
-width:8px;
-height:8px;
-background:#555;
-border-radius:50%;
-}
-
-.dots .active{
-background:#d4af37;
-}
-
-.big-number{
-font-size:20px;
-font-weight:800;
-text-align:center;
-margin-bottom:10px;
-}
-
 .rating{
-margin-top:15px;
+margin-bottom:20px;
 font-size:14px;
-text-align:center;
+color:#bbb;
 }
-
-.dark{
-background:#151515;
+.hero h1{
+font-size:34px;
+line-height:1.2;
+margin-bottom:15px;
 }
-
-.offer-box{
-border:2px solid #d4af37;
+.hero p{
+color:#aaa;
+margin-bottom:20px;
+}
+.benefits-list{
+margin-top:25px;
+}
+.benefits-list li{
+margin-bottom:10px;
+color:#ddd;
+}
+.offer-section{
+background:#111;
+}
+.offer-grid{
+display:grid;
+gap:15px;
+margin-top:30px;
+}
+.offer-card{
+border:1px solid #333;
 padding:20px;
-margin:15px 0;
+border-radius:12px;
+background:#141414;
 }
-
-.offer-box.highlight{
-background:#1f1f1f;
-border:2px solid #fff;
+.offer-card.popular{
+border:2px solid #c6a94a;
+background:#181818;
 }
-
-.guarantee{
-border:1px solid #d4af37;
+.offer-card h3{margin-bottom:8px}
+.old-price{
+text-decoration:line-through;
+color:#888;
+font-size:14px;
+}
+.badge{
+background:#c6a94a;
+color:#000;
+padding:4px 8px;
+font-size:12px;
+font-weight:700;
+display:inline-block;
+margin-top:6px;
+}
+.dark{
+background:#0f0f0f;
+}
+.split{
+display:grid;
+gap:40px;
+}
+.block-title{
+font-size:28px;
+margin-bottom:20px;
+}
+.card{
+background:#141414;
+padding:25px;
+border-radius:12px;
+border:1px solid #222;
+margin-bottom:20px;
+}
+.testimonial{
+background:#151515;
+padding:25px;
+border-radius:12px;
+border:1px solid #222;
+margin-bottom:20px;
+}
+.compare{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+.compare div{
 padding:15px;
-margin:10px 0;
+background:#141414;
+border-radius:8px;
+font-size:14px;
 }
-
-footer{
+.faq-item{
+border-bottom:1px solid #222;
+padding:15px 0;
+cursor:pointer;
+}
+.faq-answer{
+display:none;
+color:#aaa;
+margin-top:8px;
+font-size:14px;
+}
+.footer{
 background:#111;
 padding:40px 20px;
-text-align:center;
 font-size:12px;
-opacity:.6;
+color:#777;
+text-align:center;
+}
+@media(min-width:768px){
+.hero h1{font-size:48px}
+.offer-grid{grid-template-columns:1fr 1fr}
+.split{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
-🔥 PROMOÇÃO LIMITADA • FRETE GRÁTIS
-</div>
-
 <section class="hero">
-
-<div class="carousel-wrapper">
-<div class="carousel" id="carousel">
-
-<div class="slide"><img src="/1.jpg"></div>
-<div class="slide"><img src="/2.jpg"></div>
-<div class="slide"><img src="/3.jpg"></div>
-<div class="slide"><img src="/4.jpg"></div>
-<div class="slide"><img src="/5.jpg"></div>
-<div class="slide"><img src="/6.jpg"></div>
-<div class="slide"><img src="/7.jpg"></div>
-<div class="slide"><img src="/8.jpg"></div>
-<div class="slide"><img src="/9.jpg"></div>
-<div class="slide"><img src="/10.jpg"></div>
-<div class="slide"><img src="/11.jpg"></div>
-
-</div>
-<div class="dots" id="dots"></div>
-</div>
-
-<h3 class="gold big-number">3.000 MG DE POTÊNCIA</h3>
-<h3 class="gold big-number">75% ÁCIDO FÚLVICO</h3>
-
-<h1 style="text-align:center;margin-top:20px;">
-AUMENTE SUA VITALIDADE E FOCO
-</h1>
-
-<h2 class="gold" style="text-align:center;margin-top:10px;">
-GOMAS DE SHILAJIT DO HIMALAIA
-</h2>
+<div class="container">
 
 <div class="rating">
-⭐⭐⭐⭐⭐ 4.8/5 • 17.000+ Avaliações
+Excelente (4,8/5) ★ Mais de 17 mil avaliações
 </div>
 
-<button class="btn">ADICIONAR AO CARRINHO</button>
+<h1>Gomas de Shilajit do Himalaia</h1>
+<p>Aumente sua energia, desempenho e vitalidade com Shilajit puro do Himalaia e poderosos ingredientes ancestrais.</p>
 
+<ul class="benefits-list">
+<li>Aumenta o desejo sexual</li>
+<li>Aumenta a energia e a resistência</li>
+<li>Auxilia na produção de testosterona</li>
+<li>Melhora a força da ereção</li>
+<li>Aumenta a confiança e melhora o humor</li>
+</ul>
+
+<a class="btn">ADICIONAR AO CARRINHO</a>
+
+</div>
 </section>
 
-<section class="dark">
-<h2 class="gold">ESCOLHA SUA OFERTA</h2>
+<section class="offer-section">
+<div class="container">
+<h2 class="block-title gold">Promoção do Dia dos Namorados</h2>
 
-<div class="offer-box">
+<div class="offer-grid">
+
+<div class="offer-card">
 <h3>Compre 1</h3>
-<p>R$129,65</p>
+<p>R$ 129,65 BRL</p>
 </div>
 
-<div class="offer-box highlight">
-<h3>Compre 1 e Ganhe 1 GRÁTIS</h3>
-<p><s>R$259,30</s> R$129,65</p>
+<div class="offer-card popular">
+<h3>Compre 1 e leve 2</h3>
+<p>2 saquinhos</p>
+<p><span class="old-price">R$ 259,30</span></p>
+<p><strong>R$ 129,65 BRL</strong></p>
+<div class="badge">MAIS POPULAR</div>
 </div>
 
-<div class="offer-box">
-<h3>Compre 2 e Ganhe 1 GRÁTIS</h3>
-<p><s>R$311,52</s> R$206,19</p>
+<div class="offer-card">
+<h3>Compre 2 e leve 1 grátis</h3>
+<p>3 saquinhos</p>
+<p><span class="old-price">R$ 311,52</span></p>
+<p><strong>R$ 206,19 BRL</strong></p>
 </div>
 
-<div class="offer-box">
-<h3>Compre 3 e Ganhe 2 + Frete Grátis</h3>
-<p><s>R$441,43</s> R$259,30</p>
+<div class="offer-card">
+<h3>Compre 3 e leve 2 grátis</h3>
+<p>(5 saquinhos) + frete grátis</p>
+<p><span class="old-price">R$ 441,43</span></p>
+<p><strong>R$ 259,30 BRL</strong></p>
 </div>
 
-<button class="btn">COMPRAR AGORA</button>
+</div>
+
+<a class="btn">COMPRAR AGORA</a>
+
+</div>
 </section>
 
 <section>
-<h2>Isso não é apenas um suplemento —</h2>
-<h2 class="gold">É uma mudança de estilo de vida.</h2>
+<div class="container">
+<h2 class="block-title">Isso mudou a forma como me sinto todos os dias.</h2>
+<div class="testimonial">
+Comecei a usar isso na esperança de ter mais energia — duas semanas depois, me sinto um novo homem. Mais foco, treinos melhores e agora faz parte da minha rotina diária.
+</div>
+</div>
 </section>
 
 <section class="dark">
-<h2 class="gold">Força Antiga do Himalaia</h2>
-<p>Shilajit puro para apoiar testosterona e energia naturalmente.</p>
+<div class="container split">
+
+<div>
+<h2 class="block-title gold">Força ancestral do Himalaia</h2>
+<p>Enriquecido com Shilajit do Himalaia e Ácido Fúlvico para promover naturalmente testosterona, energia e vitalidade.</p>
+</div>
+
+<div>
+<h2 class="block-title">Potencialize seu dia, domine sua noite.</h2>
+<p>Desenvolvido para aumentar foco durante o dia e melhorar resistência e desejo sexual à noite.</p>
+</div>
+
+</div>
 </section>
 
 <section>
-<h2>Resultados Reais</h2>
-<p>92% relataram mais energia em 3 semanas</p>
-<p>87% notaram melhora no desempenho</p>
-<p>90% recomendariam a um amigo</p>
+<div class="container">
+<h2 class="block-title">Como funciona</h2>
+
+<div class="card">
+<h3>A absorção começa naturalmente</h3>
+<p>O ácido fúlvico ajuda na absorção de minerais essenciais como zinco e magnésio.</p>
+</div>
+
+<div class="card">
+<h3>Formulado para corpos ricos em melanina</h3>
+<p>Auxilia na ativação de vias específicas para melhor aproveitamento nutricional.</p>
+</div>
+
+<div class="card">
+<h3>Equilíbrio hormonal restaurado</h3>
+<p>Suporte natural à testosterona, energia e força.</p>
+</div>
+
+</div>
 </section>
 
 <section class="dark">
-<h2 class="gold">Garantias</h2>
-<div class="guarantee">✔ Garantia de 30 dias</div>
-<div class="guarantee">✔ Checkout Seguro</div>
-<div class="guarantee">✔ Envio Rápido</div>
+<div class="container">
+<h2 class="block-title gold">Resultados comprovados</h2>
+
+<div class="testimonial">
+<strong>Derrick S.</strong><br>
+Isso mudou a forma como me sinto todos os dias.
+</div>
+
+<div class="testimonial">
+<strong>Tyrese M.</strong><br>
+Simplesmente funciona.
+</div>
+
+<div class="testimonial">
+<strong>André L.</strong><br>
+Sexo melhor, mais energia, tudo melhor.
+</div>
+
+</div>
 </section>
 
-<footer>
-© 2026 Elix Labs
-</footer>
+<section>
+<div class="container">
+<h2 class="block-title">Por que nos escolher?</h2>
+
+<div class="compare">
+<div><strong>Elix Labs</strong><br>Fácil de consumir<br>Ótimo sabor<br>400mg por porção</div>
+<div><strong>Resina comum</strong><br>Bagunçado<br>Mau gosto<br>Inconsistente</div>
+</div>
+
+</div>
+</section>
+
+<section class="dark">
+<div class="container">
+<h2 class="block-title gold">Perguntas Frequentes</h2>
+
+<div class="faq-item" onclick="toggleFAQ(this)">
+<strong>Como devo tomar?</strong>
+<div class="faq-answer">
+Tome duas gomas por dia com alimentos para melhor absorção.
+</div>
+</div>
+
+<div class="faq-item" onclick="toggleFAQ(this)">
+<strong>Quando vejo resultados?</strong>
+<div class="faq-answer">
+Usuários relatam melhora entre 2 e 3 semanas.
+</div>
+</div>
+
+<div class="faq-item" onclick="toggleFAQ(this)">
+<strong>Tem efeitos colaterais?</strong>
+<div class="faq-answer">
+A fórmula é natural e bem tolerada pela maioria dos usuários.
+</div>
+</div>
+
+</div>
+</section>
+
+<section style="background:#141414;text-align:center">
+<div class="container">
+<h2 class="gold">🎁 COMPRE MAIS, ECONOMIZE MAIS</h2>
+<p>ATÉ 20% DE DESCONTO POR TEMPO LIMITADO</p>
+<a class="btn">COMPRAR AGORA</a>
+</div>
+</section>
+
+<div class="footer">
+© 2026 Elix Labs • Política de Privacidade • Termos
+</div>
 
 <script>
-const carousel = document.getElementById('carousel');
-const slides = document.querySelectorAll('.slide');
-const dotsContainer = document.getElementById('dots');
-
-let index = 0;
-let startX = 0;
-
-slides.forEach((_,i)=>{
-const dot=document.createElement('span');
-if(i===0)dot.classList.add('active');
-dotsContainer.appendChild(dot);
-});
-
-const dots=dotsContainer.querySelectorAll('span');
-
-function updateDots(){
-dots.forEach(d=>d.classList.remove('active'));
-dots[index].classList.add('active');
+function toggleFAQ(el){
+const answer=el.querySelector(".faq-answer");
+answer.style.display=answer.style.display==="block"?"none":"block";
 }
-
-function setPosition(){
-carousel.style.transform=`translateX(-${index*100}%)`;
-}
-
-carousel.addEventListener('touchstart',e=>{
-startX=e.touches[0].clientX;
-});
-
-carousel.addEventListener('touchend',e=>{
-const diff=e.changedTouches[0].clientX-startX;
-
-if(diff<-50 && index<slides.length-1)index++;
-if(diff>50 && index>0)index--;
-
-setPosition();
-updateDots();
-});
 </script>
 
 </body>
