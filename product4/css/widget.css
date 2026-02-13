@@ -1,0 +1,65 @@
+.r--product-section::after,
+.r--widget-section::after,
+.r--questions-section::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.r--widget-section,
+.r--featured-section,
+.r--questions-section {
+    width: 100%;
+}
+
+.r--hide-widget .r--empty {
+    display: none !important;
+}
+
+.r--wapper-widget {
+    float: left;
+    width: 100%;
+}
+
+.r--widget-wapper {
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ryviu-container {
+    max-width: 1200px;
+    padding: 0 15px;
+    min-height: 10px;
+}
+
+.r-container {
+    margin: 0 auto;
+    float: none;
+}
+
+.r-container::after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+.r--empty-data {
+    text-align: center;
+    padding: 50px 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.r--empty-data h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.r--empty-data p {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+}
